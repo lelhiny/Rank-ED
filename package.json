@@ -1,0 +1,22 @@
+{
+  "name": "rank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lelhiny/Rank-ED.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lelhiny/Rank-ED/issues"
+  },
+  "homepage": "https://github.com/lelhiny/Rank-ED#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
