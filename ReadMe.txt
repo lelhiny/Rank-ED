@@ -31,3 +31,10 @@
 - install Mosquitto and Mosquitto clients:
 	$sudo apt-get install mosquito
 
+#installing java jdk on the raspberry pi for running weka:
+-run:
+	$sudo apt-get install oracle-java7-jdk
+
+#installing meyda for extracting voice features using node js:
+-run:
+	$ npm install meyda
