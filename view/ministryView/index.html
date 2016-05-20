@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 30.1677, lng: 72.6223},
+          zoom: 8
+        });
+			  // Add some markers to the map.
+  map.data.setStyle(function(feature) {
+    return {
+      title: feature.getProperty('name'),
+      optimized: false
+    };
+  });
+  map.data.addGeoJson(schools);
+    var image_yellow = 'img/marker_yellow.png';
+	    var image_green = 'img/marker_green.png';
+    var image_red = 'img/marker_red.png';
+   //1
+    var marker1 = new google.maps.Marker({
+    position: {lat: 30.21835, lng: 72.5902},
+    map: map,
+    title: 'GHSS 142/EB Burewala',
+	icon: image_yellow
+  });
+  
+   var infowindow1 = new google.maps.InfoWindow({
+    content: 'GHSS 142/EB Burewala'
+  });
+
+   //2
+    infowindow1.open(map, marker1);
+	
+	var marker2 = new google.maps.Marker({
+    position: {lat: 30.1622, lng: 72.6848},
+    map: map,
+    title: 'GMCHS Burewala',
+	icon: image_green
+  });
+  
+   var infowindow2 = new google.maps.InfoWindow({
+    content: 'GMCHS Burewala'
+  });
+
+
+    infowindow2.open(map, marker2);
+	
+	//3
+	var marker3 = new google.maps.Marker({
+    position: {lat: 30.16567, lng: 72.64048},
+    map: map,
+    title: 'GHS 515/EB Burewala',
+	icon: image_green
+  });
+  
+   var infowindow3 = new google.maps.InfoWindow({
+    content: 'GHS 515/EB Burewala'
+  });
+
+
+    infowindow3.open(map, marker3);
+	
+	//4
+	var marker4 = new google.maps.Marker({
+    position: {lat: 30.22371, lng: 72.549},
+    map: map,
+    title: 'GPS 148/EB',
+	icon: image_green
+  });
+  
+   var infowindow4 = new google.maps.InfoWindow({
+    content: 'GPS 148/EB'
+  });
+
+
+    infowindow4.open(map, marker4);
+	
+	
+	//5
+	var marker5 = new google.maps.Marker({
+    position: {lat: 30.18495, lng: 72.54311},
+    map: map,
+    title: 'GPS 158/EB',
+	icon: image_red
+  });
+  
+   var infowindow5 = new google.maps.InfoWindow({
+    content: 'GPS 158/EB'
+  });
+
+
+    infowindow5.open(map, marker5);
+	
+	//6
+	var marker6 = new google.maps.Marker({
+    position: {lat: 30.16094, lng: 72.68615},
+    map: map,
+    title: 'GGPS E BLOCK',
+	icon: image_yellow
+  });
+  
+   var infowindow6 = new google.maps.InfoWindow({
+    content: 'GGPS E BLOCK'
+  });
+
+
+    infowindow6.open(map, marker6);
+	
+	//7
+	var marker7 = new google.maps.Marker({
+    position: {lat: 30.1677, lng: 72.6223},
+    map: map,
+    title: 'GGPS AZEEM ABAD',
+	icon: image_green
+  });
+  
+   var infowindow7 = new google.maps.InfoWindow({
+    content: 'GGPS AZEEM ABAD'
+  });
+
+
+    infowindow7.open(map, marker7);
+ 
+ //8
+	var marker8 = new google.maps.Marker({
+    position: {lat: 29.70745, lng: 72.06558},
+    map: map,
+    title: 'GPS KOTLI JUNAID',
+	icon: image_red
+  });
+  
+   var infowindow8 = new google.maps.InfoWindow({
+    content: 'GPS KOTLI JUNAID'
+  });
+
+
+    infowindow8.open(map, marker8);
+	
+	 //9
+	var marker9 = new google.maps.Marker({
+    position: {lat: 29.74112, lng: 72.05673},
+    map: map,
+    title: 'GPS DHAMAKI',
+	icon: image_green
+  });
+  
+   var infowindow9 = new google.maps.InfoWindow({
+    content: 'GPS DHAMAKI'
+  });
+
+
+    infowindow9.open(map, marker9);
+
+
+      }
+
+
+// GeoJSON, describing the locations and names of some cities.
+var schools = {
+  type: 'FeatureCollection',
+  features: [{
+    type: 'Feature',
+    geometry: {type: 'Point', coordinates: [30.21835, 72.5902]},
+    properties: {name: 'GHSS 142/EB Burewala'}
+  }, {
+    type: 'Feature',
+    geometry: {type: 'Point', coordinates: [30.1622, 72.6848]},
+    properties: {name: 'GMCHS Burewala'}
+  }, {
+    type: 'Feature',
+    geometry: {type: 'Point', coordinates: [30.16567, 72.64048]},
+    properties: {name: 'GHS 515/EB Burewala'}
+  }, {
+    type: 'Feature',
+    geometry: {type: 'Point', coordinates: [30.16208, 72.68046]},
+    properties: {name: 'GGMCHS Burewala'}
+  }, {
+    type: 'Feature',
+    geometry: {type: 'Point', coordinates: [30.22371, 72.549]},
+    properties: {name: 'GPS 148/EB'}
+  }, {
+    type: 'Feature',
+    geometry: {type: 'Point', coordinates: [30.20383, 72.52732]},
+    properties: {name: 'GPS 152/EB'}
+  }, {
+    type: 'Feature',
+    geometry: {type: 'Point', coordinates: [30.18495, 72.54311]},
+    properties: {name: 'GPS 158/EB'}
+  }, {
+    type: 'Feature',
+    geometry: {type: 'Point', coordinates: [0, 0]},
+    properties: {name: '0°N 0°E'}
+  }]
+};
+
+
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJn5IkDuOJME_bNxbh0t5mtl6OpoXEQro&callback=initMap"
+    async defer></script>
+  </body>
+</html>
