@@ -36,5 +36,9 @@
 	$sudo apt-get install oracle-java7-jdk
 
 #installing meyda for extracting voice features using node js:
--run:
+- run:
 	$ npm install meyda
+#installing paho on rspberrypi :
+- Download the archive form : https://github.com/eclipse/paho.mqtt.python
+- Unpack the archive.  
+- Enter the directory from terminal and run: $python setup.py install
